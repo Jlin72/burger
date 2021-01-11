@@ -4,13 +4,14 @@ const burger = {
     all(cb) {
         orm.selectAll('burgers', (res) => cb(res));
     },
-    addToTable(column, value, cb) {
-        orm.insertOne('burgers', column, value, (res) => {
+    addToTable(value, cb) {
+        orm.insertOne('burgers', 'burger_name', value, (res) => {
             cb(res);
         });
     },
-    update(column, value, idNumber, cb) {
-        orm.updateOne('burgers', column, boolean, idNumber, (res)=> {
+    update(boolean, idNumber, cb) {
+        condition = 
+        orm.updateOne('burgers', 'devoured', boolean, idNumber, (res)=> {
             cb(res);
         });
     },

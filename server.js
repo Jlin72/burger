@@ -21,5 +21,5 @@ app.use(routes);
 
 //Creating connection to port
 app.listen(PORT, ()=> {
-    console.log(`Connection succesful`);
+    console.log(`server is listening to: ${PORT}`);
 });

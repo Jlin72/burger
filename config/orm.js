@@ -26,10 +26,10 @@ const orm = {
     },
 
     //Update a table
-    updateOne(tablename, column, value, idNumber, cb) {
+    updateOne(tablename, column, boolean, idNumber, cb) {
         connection.query(
             `UPDATE ?? SET ?? = ? WHERE id = ?`,
-            [tablename, column, boolean, id, idNumber],
+            [tablename, column, boolean, idNumber],
             (err, result) => {
                 if(err) throw err;
                 cb(result);

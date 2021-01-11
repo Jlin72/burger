@@ -3,7 +3,7 @@ const express = require('express')
 const exphbs = require('express-handlebars');
 const routes = require('./controllers/burgerControllers');
 const app = express();
-const PORT = process.env.PORT || 8080;
+// const PORT = process.env.PORT || 8080;
 
 //Setting handlebars as the main view engine
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
@@ -20,6 +20,6 @@ app.use(express.static('public'));
 app.use(routes);
 
 //Creating connection to port
-app.listen(PORT, ()=> {
-    console.log(`server is listening to: ${PORT}`);
+app.listen(process.env.PORT || 8080, ()=> {
+    console.log(`server is connected`);
 });

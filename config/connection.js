@@ -8,7 +8,7 @@ const connection = mysql.createConnection({
 });
 
 connection.connect((err) => {
-    if(err) console.log(`ERROR: ${error.stack}`);
+    if(err) console.log(`ERROR: ${err.stack}`);
     console.log(`Connection succesful! Connected to id: ${connection.threadId}`);
 });
 

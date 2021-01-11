@@ -1,11 +1,16 @@
 const mysql = require('mysql');
-const connection = mysql.createConnection({
-    user: 'root',
-    host: 'localhost',
-    PORT: 3306,
-    database: 'burgers_db',
-    password: 'RinaPoyo349!'
-});
+let connection;
+
+if(process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+    connection = mysql.createConnection({
+        user: 'root',
+        host: 'localhost',
+        database: 'burgers_db',
+        password: 'RinaPoyo349!'
+    });
+}
 
 connection.connect((err) => {
     if(err) console.log(`ERROR: ${err.stack}`);

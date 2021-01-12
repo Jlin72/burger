@@ -18,7 +18,7 @@
 ## Description 
   This repository contains all the required code for web application Eat Da Burger to work properly online.
 ## Deployed application link
-    Link to the deployed heroku app: https://eatdaburger-jlin.herokuapp.com/
+  Link to the deployed heroku app: https://eatdaburger-jlin.herokuapp.com/
 ## Installation
   No installation required to run the app. Simply just click on the deployed application to link to use the app on online.
 
